@@ -1,0 +1,1 @@
+# openapi-maven-class-generator
