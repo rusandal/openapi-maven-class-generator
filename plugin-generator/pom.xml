@@ -96,7 +96,9 @@
               <configOptions>
                 <interfaceOnly>true</interfaceOnly>
                 <!--<modelPackage>model</modelPackage>-->
+                <!-- Добавлена аннотация на каждым сгенерированным классом -->
                 <additionalModelTypeAnnotations>@lombok.experimental.SuperBuilder;</additionalModelTypeAnnotations>
+                <!-- Название папки ниже <output> ${project.basedir}/target/generated-sources/openapi/sourceFolder-->
                 <sourceFolder>sourceFolder</sourceFolder>
                 <implFolder>implFolder</implFolder>
               </configOptions>
