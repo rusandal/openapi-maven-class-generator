@@ -1,0 +1,72 @@
+openapi: 3.0.2
+info:
+  title: EMDS
+  version: 1.0.0
+  description: 'Модели, относящиеся к блоку EMDS'
+paths: { }
+components:
+  schemas:
+    Person:
+      description: Модель человека
+      type: object
+      properties:
+        surname:
+          description: Фамилия
+          type: string
+        name:
+          description: Имя
+          type: string
+        birthDate:
+          format: date
+          description: Дата рождения
+          type: string
+        birthDateTime:
+          format: date-time
+          description: Дата и время рождения
+          type: string
+        height:
+          description: Рост
+          type: integer
+        address:
+          description: Адреса проживание и прописки
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+    Address:
+      title: Address
+      type: object
+      description: Адрес
+      properties:
+        text:
+          type: string
+          description: Адрес строкой
+        region:
+          type: string
+          description: Название региона
+        area:
+          type: string
+          description: Район региона
+        city:
+          type: string
+          description: Населенный пункт
+        cityArea:
+          type: string
+          description: Район населенного пункта
+        street:
+          type: string
+          description: Улица
+        house:
+          type: string
+          description: Дом
+        structure:
+          type: string
+          description: Строение
+        appartment:
+          type: string
+          description: Квартира
+        postIndex:
+          type: string
+          description: Почтовый индекс
+      required:
+        - text
+        - kladr

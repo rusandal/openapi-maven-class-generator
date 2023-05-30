@@ -19,5 +19,6 @@
 
   <modules>
     <module>plugin-generator</module>
+    <module>plugin_generator_with_template</module>
   </modules>
 </project>
